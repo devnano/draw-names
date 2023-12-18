@@ -4,7 +4,14 @@
 
        <h2>Hola {{draw_name.from_participant.name}} </h2>
 
-       <div style="font-size:30px;color:blue">Tenés que regalarle a <b>{{draw_name.to_participant.name}}</b></div>
+       <div style="font-size:30px;color:blue">Tenés que regalarle a <b>{{draw_name.to_participant.name}}</b></div><br>
+
+       {% if draw_name.wished_gift %}
+           {{draw_name.to_participant.name}} prefiere que le regales <b>{{draw_name.wished_gift}}</b>
+       {% else %}
+           {{draw_name.to_participant.name}} todavía no anotó qué le gustaría que le regales
+       {% endif %}
+
 
        <h3>El monto para el regalo es de $15000</h3>
 
@@ -19,7 +26,7 @@
        </form>
 
        {% if saved %}
-        <div style="color:green">¡Listo, ahora a esperar el regalo!</div>
+        <div style="color:green">¡Listo, ahora a comprar y a esperar tu regalo!</div>
        {% endif %}
     </div>
 
