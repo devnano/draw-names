@@ -1,0 +1,29 @@
+
+    <div>
+       <h1>SORTEO PARA EL REGALO DE NAVIDAD 2023</h1>
+
+       <h2>Hola {{draw_name.from_participant.name}} </h2>
+
+       <div style="font-size:30px;color:blue">Tenés que regalarle a <b>{{draw_name.to_participant.name}}</b></div>
+
+       <h3>El monto para el regalo es de $15000</h3>
+
+       <form method="POST">
+        {% csrf_token %}
+        <label>Sobre tu regalo: ¿Qué te gustaría que te regalen <b>a vos</b>? (anotá varias opciones para hacerle más fácil la compra a tu amigo invisible)</label><br><br>
+        {% comment %} <textarea id="wished_gift" value="{{draw_name_as_receiver.wished_gift}}"></textarea> {% endcomment %}
+        {{form}}
+<br><br>
+
+        <button type="submit">Enviar</button>
+       </form>
+
+       {% if saved %}
+        <div style="color:green">¡Listo, ahora a esperar el regalo!</div>
+       {% endif %}
+    </div>
+
+
+
+
+
