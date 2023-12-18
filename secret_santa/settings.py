@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b*g_5a+apc&j^tmy*8d%j**==i6*6%q_no2ll4u==7te-^+%t@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["draw-names-production.up.railway.app", "localhost"]
 
 
 # Application definition
