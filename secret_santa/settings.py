@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-b*g_5a+apc&j^tmy*8d%j**==i6*6%q_no2ll4u==7te-^+%t@
 DEBUG = True
 
 ALLOWED_HOSTS = ["draw-names-production.up.railway.app", "localhost"]
-CSRF_TRUSTED_ORIGINS = ['https://draw-names-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://draw-names-production.up.railway.app']
 
 
 # Application definition
