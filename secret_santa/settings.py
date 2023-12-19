@@ -76,13 +76,14 @@ WSGI_APPLICATION = 'secret_santa.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+RAILWAY_VOLUME_MOUNT_PATH = os.environ.get("RAILWAY_VOLUME_MOUNT_PATH")
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': f"{RAILWAY_VOLUME_MOUNT_PATH}/db.sqlite3" if RAILWAY_VOLUME_MOUNT_PATH else  BASE_DIR / 'db.sqlite3',
     }
 }
+print(DATABASES)
 
 
 # Password validation
