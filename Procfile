@@ -1,1 +1,1 @@
-web: gunicorn secret_santa.wsgi
+web: start.sh
